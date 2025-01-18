@@ -1,3 +1,39 @@
+Para acceder al front se debe hacer pull a la imagen gecardenassa/pt_joonik_frontend con el comando 
+
+```
+ docker pull gecardenassa/pt_joonik_frontend
+```
+
+Para correr la imagen se utiliza el siguiente comando 
+
+```
+ docker run -d -p 8000:8000 gecardenassa/pt_joonik_frontend:v1.0
+```
+
+
+ Para el backend se utilizó Sail junto a docker, para este se debe hacer pull a este repositorio, con la consola en la carpeta del repositorio correr para tener el alias del sail
+
+```
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+```
+Y para correr el backend
+
+```
+sail up -d
+```
+
+Este correrá por defecto en el puerto 80.
+
+Para cualquier cambio o uso de php se puede utilizar sail luego de darle el alias, incluyendo las pruebas 
+
+```
+sail php artisan test
+```
+
+Se deja el read basico para más dudas sobre laravel.
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
